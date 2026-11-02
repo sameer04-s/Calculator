@@ -24,10 +24,7 @@
 
 body {
     min-height: 100vh;
-    background:
-        radial-gradient(circle at 15% 15%, #292052 0, transparent 35%),
-        radial-gradient(circle at 85% 85%, #122c48 0, transparent 35%),
-        var(--bg);
+    background:ffffff;
     color: var(--text);
     font-family: 'Inter', sans-serif;
     display: flex;
