@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova - Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+            <div>
+                <h2>Nova</h2>
+                <span>SCIENTIFIC CALCULATOR</span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button class="icon-btn" id="historyToggle" title="History">◷</button>
+            <button class="icon-btn" id="themeToggle" title="Change theme">☼</button>
+        </div>
+    </header>
+
+    <main class="calculator-layout">
+
+        <section class="calculator">
+
+            <div class="display">
+                <div class="display-top">
+                    <span id="mode">DEG</span>
+                    <span id="memoryIndicator"></span>
+                </div>
+
+                <div id="expression" class="expression"></div>
+                <div id="result" class="result">0</div>
+            </div>
+
+            <div class="mode-row">
+                <button class="mode-btn active" id="degBtn">DEG</button>
+                <button class="mode-btn" id="radBtn">RAD</button>
+                <span class="mode-info">SCIENTIFIC MODE</span>
+            </div>
+
+            <div class="keypad">
+
+                <button class="key function" data-action="clear">AC</button>
+                <button class="key function" data-action="delete">DEL</button>
+                <button class="key function" data-value="(">(</button>
+                <button class="key function" data-value=")">)</button>
+                <button class="key operator" data-value="÷">÷</button>
+
+                <button class="key function" data-value="sin(">sin</button>
+                <button class="key function" data-value="cos(">cos</button>
+                <button class="key function" data-value="tan(">tan</button>
+                <button class="key function" data-value="sqrt(">√</button>
+                <button class="key operator" data-value="×">×</button>
+
+                <button class="key function" data-value="log(">log</button>
+                <button class="key function" data-value="ln(">ln</button>
+                <button class="key function" data-value="^2">x²</button>
+                <button class="key function" data-value="^">xʸ</button>
+                <button class="key operator" data-value="-">−</button>
+
+                <button class="key function" data-value="π">π</button>
+                <button class="key function" data-value="e">e</button>
+                <button class="key function" data-value="!">x!</button>
+                <button class="key function" data-value="%">%</button>
+                <button class="key operator" data-value="+">+</button>
+
+                <button class="key memory" data-action="mc">MC</button>
+                <button class="key memory" data-action="mr">MR</button>
+                <button class="key memory" data-action="mplus">M+</button>
+                <button class="key memory" data-action="mminus">M−</button>
+                <button class="key number" data-value="7">7</button>
+
+                <button class="key number" data-value="8">8</button>
+                <button class="key number" data-value="9">9</button>
+                <button class="key number" data-value="4">4</button>
+                <button class="key number" data-value="5">5</button>
+                <button class="key number" data-value="6">6</button>
+
+                <button class="key number" data-value="1">1</button>
+                <button class="key number" data-value="2">2</button>
+                <button class="key number" data-value="3">3</button>
+                <button class="key number" data-value="0">0</button>
+                <button class="key number" data-value=".">.</button>
+
+                <button class="key function" data-action="sign">±</button>
+                <button class="key function" data-value="Ans">Ans</button>
+                <button class="key function" data-value="abs(">abs</button>
+                <button class="key equal" data-action="calculate">=</button>
+
+            </div>
+
+            <div class="footer">
+                <span>POWERED BY NOVA ENGINE</span>
+                <span>PRECISION MATHEMATICS</span>
+            </div>
+
+        </section>
+
+        <aside class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <div>
+                    <h3>History</h3>
+                    <p>Your recent calculations</p>
+                </div>
+                <button id="clearHistory" class="clear-history">Clear</button>
+            </div>
+
+            <div id="historyList" class="history-list">
+                <div class="empty-history">
+                    <span>◷</span>
+                    <p>No calculations yet</p>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <div class="credit">Designed for smarter calculations ✦</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
